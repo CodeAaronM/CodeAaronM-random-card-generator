@@ -16,13 +16,31 @@
     ></script>
     <link rel="stylesheet" type="text/css" href="/src/style.css" />
   </head>
-  <body>
-    <h1 id="pinta1">A</h1>
-    <h1 id="numero">8</h1>
-    <h1 id="pinta2">N</h1>
-    <button type="button" class="btn btn-primary" onclick="getcard()">
-      Primary
-    </button>
+  <body class="bg-success">
+    <div
+      class="container-fluid"
+      style="justify-content: center; display: flex;"
+    >
+      <div class="card" style="width: 15%; height: 500px;">
+        <div class="card-header bg-white" style="border: 0px;">
+          <h1 id="pinta1" style="font-size: 70px;"></h1>
+        </div>
+        <div class="card-body text-center bg-white">
+          <h1 id="numero" style="font-size: 180px;"></h1>
+        </div>
+        <div class="card-footer text-end bg-white" style="border: 0px;">
+          <h1 id="pinta2" style="font-size: 70px;"></h1>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container-fluid"
+      style="justify-content: center; display: flex; margin-top: 10px;"
+    >
+      <button type="button" class="btn btn-primary" onclick="getcard()">
+        reset
+      </button>
+    </div>
     <script src="/src/app.js"></script>
   </body>
 </html>

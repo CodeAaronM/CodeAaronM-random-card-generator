@@ -5,27 +5,23 @@ function getcard() {
   switch (pinta()) {
     case 1:
       document.querySelector("#pinta1").innerHTML =
-        '<i class="fa-solid fa-heart"></i>';
+        "<h1 class='text-danger' style='font-size: 70px;'>♥</h1>";
       document.querySelector("#pinta2").innerHTML =
-        '<i class="fa-solid fa-heart"></i>';
+        "<h1 class='text-danger' style='font-size: 70px;'>♥</h1>";
       break;
     case 2:
       document.querySelector("#pinta1").innerHTML =
-        '<i class="fa-solid fa-diamond"></i>';
+        "<h1 class='text-danger' style='font-size: 70px;'>♦</h1>";
       document.querySelector("#pinta2").innerHTML =
-        '<i class="fa-solid fa-diamond"></i>';
+        "<h1 class='text-danger' style='font-size: 70px;'>♦</h1>";
       break;
     case 3:
-      document.querySelector("#pinta1").innerHTML =
-        '<i class="fa-solid fa-clover"></i>';
-      document.querySelector("#pinta2").innerHTML =
-        '<i class="fa-solid fa-clover"></i>';
+      document.querySelector("#pinta1").innerHTML = "♣";
+      document.querySelector("#pinta2").innerHTML = "♣";
       break;
     case 4:
-      document.querySelector("#pinta1").innerHTML =
-        '<i class="fa-solid fa-rocket"></i>';
-      document.querySelector("#pinta2").innerHTML =
-        '<i class="fa-solid fa-rocket"></i>';
+      document.querySelector("#pinta1").innerHTML = "♠";
+      document.querySelector("#pinta2").innerHTML = "♠";
       break;
 
     default:
@@ -36,9 +32,28 @@ function getcard() {
       break;
   }
 }
-
 function numero() {
-  return Math.ceil(Math.random() * 13);
+  let valor = Math.ceil(Math.random() * 13);
+  let cartasAltas = "";
+  switch (valor) {
+    case 1:
+      cartasAltas = "A";
+      break;
+    case 11:
+      cartasAltas = "J";
+      break;
+    case 12:
+      cartasAltas = "Q";
+      break;
+    case 13:
+      cartasAltas = "K";
+      break;
+
+    default:
+      cartasAltas = valor;
+      break;
+  }
+  return cartasAltas;
 }
 
 function pinta() {
